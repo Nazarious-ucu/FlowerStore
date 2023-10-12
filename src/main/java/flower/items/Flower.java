@@ -16,30 +16,18 @@ public class Flower extends Item {
     @Getter
     private FlowerType flowerType;
 
-
-
-
-
-    /**
-     * Get the color of the flower.
-     * @return The color of the flower as a string.
-     */
-    public String getColor() {
-        return color.toString();
-    }
-
       /**
      * Creates a new Flower object with the specified attributes.
      *
      * @param newSepalLength The sepal length of the flower.
-     * @param NewColor The color of the flower.
+     * @param newColor The color of the flower.
      * @param newFlowerType The type of the flower.
      * @param newPrice The price of the flower.
      */
-    public Flower(double newSepalLength, FlowerColor NewColor,
+    public Flower(double newSepalLength, FlowerColor newColor,
                      FlowerType newFlowerType, double newPrice) {
         this.sepalLength = newSepalLength;
-        this.color = NewColor;
+        this.color = newColor;
         this.price = newPrice;
         this.flowerType = newFlowerType;
     }
@@ -56,4 +44,11 @@ public class Flower extends Item {
         this.flowerType = flower.flowerType;
     }
 
+    /**
+     * Get the color of the flower.
+     * @return The color of the flower as a string.
+     */
+    public String getColor() {
+        return color.toString();
+    }
 }
