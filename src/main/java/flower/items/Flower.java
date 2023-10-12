@@ -28,6 +28,22 @@ public class Flower extends Item {
         return color.toString();
     }
 
+      /**
+     * Creates a new Flower object with the specified attributes.
+     *
+     * @param sepalLength The sepal length of the flower.
+     * @param color The color of the flower.
+     * @param flowerType The type of the flower.
+     * @param price The price of the flower.
+     */
+    public Flower(double sepalLength, FlowerColor color,
+                     FlowerType flowerType, double price) {
+        this.sepalLength = sepalLength;
+        this.color = color;
+        this.flowerType = flowerType;
+        this.price = price;
+    }
+
     /**
      * Creates a new Flower object based on an existing flower.
      *
@@ -40,18 +56,4 @@ public class Flower extends Item {
         this.price = flower.price;
     }
 
-    /**
-     * Creates a new Flower object with the specified attributes.
-     *
-     * @param sepalLength The sepal length of the flower.
-     * @param color The color of the flower.
-     * @param flowerType The type of the flower.
-     * @param price The price of the flower.
-     */
-    public Flower(double sepalLength, FlowerColor color, FlowerType flowerType, double price) {
-        this.sepalLength = sepalLength;
-        this.color = color;
-        this.flowerType = flowerType;
-        this.price = price;
-    }
 }

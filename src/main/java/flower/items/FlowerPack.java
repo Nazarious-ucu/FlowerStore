@@ -3,8 +3,9 @@ package flower.items;
 import lombok.Getter;
 
 /**
- * Represents a flower pack containing a specific type of flower and its quantity.
- */
+ * Represents a flower pack containing a
+ *  specific type of flower and its quantity.
+ **/
 public class FlowerPack {
     private Flower flower;
 
@@ -28,7 +29,12 @@ public class FlowerPack {
      * @param quantity The new quantity of flowers (non-negative).
      */
     public void setQuantity(int quantity) {
-        this.quantity = quantity < 0 ? 0 : quantity;
+        // this.quantity = quantity < 0 ? 0 : quantity;
+        if(quantity < 0){
+            this.quantity = 0;
+        }else{
+            this.quantity = quantity;
+        }
     }
 
     /**

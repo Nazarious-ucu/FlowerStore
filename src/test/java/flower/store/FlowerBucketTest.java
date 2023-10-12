@@ -32,7 +32,8 @@ public class FlowerBucketTest {
     public void testPrice() {
         int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
         int quantity = RANDOM_GENERATOR.nextInt(MAX_QUANTITY);
-        Flower flower = new Flower(RANDOM_GENERATOR.nextDouble(), FlowerColor.RED, FlowerType.ROSE, price);
+        Flower flower = new Flower(RANDOM_GENERATOR.nextDouble(),
+                        FlowerColor.RED, FlowerType.ROSE, price);
         flower.setPrice(price);
         FlowerPack flowerPack = new FlowerPack(flower, quantity);
         flowerBucket.add(flowerPack);
