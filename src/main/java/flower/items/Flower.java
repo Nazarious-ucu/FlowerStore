@@ -1,4 +1,4 @@
-package flower.store;
+package flower.items;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -6,11 +6,11 @@ import lombok.Setter;
 
 
 @Setter
-public class Flower {
+public class Flower extends Item{
     @Getter
     private double sepalLength;
     private FlowerColor color;
-    @Getter
+    @Getter @Setter
     private double price;
     @Getter
     private FlowerType flowerType;
@@ -24,6 +24,13 @@ public class Flower {
         this.color = flower.color;
         this.flowerType = flower.flowerType;
         this.price = flower.price;
+    }
+
+    public Flower(double sepalLength, FlowerColor color, FlowerType flowerType, double price ) {
+        this.sepalLength = sepalLength;
+        this.color = color;
+        this.flowerType = flowerType;
+        this.price = price;
     }
 
 }

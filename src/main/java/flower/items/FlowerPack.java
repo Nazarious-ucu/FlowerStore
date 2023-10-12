@@ -1,4 +1,4 @@
-package flower.store;
+package flower.items;
 
 import lombok.Getter;
 
@@ -10,9 +10,9 @@ public class FlowerPack {
     private int quantity;
 
 
-    public FlowerPack(Flower flower) {
+    public FlowerPack(Flower flower, int quantity) {
     this.flower = new Flower(flower);
-    this.quantity = 1;
+    this.quantity = quantity;
     }
 
 
@@ -21,7 +21,6 @@ public class FlowerPack {
     }
 
     public double getPrice() {
-        double i =  quantity*flower.getPrice();
-        return i;
+        return quantity * flower.getPrice();
     }
 }

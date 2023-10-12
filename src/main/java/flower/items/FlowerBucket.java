@@ -1,4 +1,4 @@
-package flower.store;
+package flower.items;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ public class FlowerBucket {
 
     private List<FlowerPack> flowerPacks = new ArrayList<>();
 
-    public void addFlowerPack(FlowerPack flowerPacks) {
+    public void add(FlowerPack flowerPacks) {
         this.flowerPacks.add(flowerPacks);
     }
 
