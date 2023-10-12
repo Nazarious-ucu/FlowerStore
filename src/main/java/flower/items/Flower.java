@@ -31,17 +31,17 @@ public class Flower extends Item {
       /**
      * Creates a new Flower object with the specified attributes.
      *
-     * @param sepalLength The sepal length of the flower.
-     * @param color The color of the flower.
-     * @param flowerType The type of the flower.
-     * @param price The price of the flower.
+     * @param newSepalLength The sepal length of the flower.
+     * @param NewColor The color of the flower.
+     * @param newFlowerType The type of the flower.
+     * @param newPrice The price of the flower.
      */
-    public Flower(double sepalLength, FlowerColor color,
-                     FlowerType flowerType, double price) {
-        this.sepalLength = sepalLength;
-        this.color = color;
-        this.flowerType = flowerType;
-        this.price = price;
+    public Flower(double newSepalLength, FlowerColor NewColor,
+                     FlowerType newFlowerType, double newPrice) {
+        this.sepalLength = newSepalLength;
+        this.color = NewColor;
+        this.price = newPrice;
+        this.flowerType = newFlowerType;
     }
 
     /**
@@ -52,8 +52,8 @@ public class Flower extends Item {
     public Flower(Flower flower) {
         this.sepalLength = flower.sepalLength;
         this.color = flower.color;
-        this.flowerType = flower.flowerType;
         this.price = flower.price;
+        this.flowerType = flower.flowerType;
     }
 
 }
