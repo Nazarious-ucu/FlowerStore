@@ -16,6 +16,8 @@ public class Flower extends Item {
     @Getter
     private FlowerType flowerType;
 
+
+
     /**
      * Get the color of the flower.
      * @return The color of the flower as a string.
