@@ -11,7 +11,9 @@ import java.util.Random;
 
 import org.junit.jupiter.api.Assertions;
 
-
+/**
+ * Unit tests for the Flower class.
+ */
 public class FlowerTest {
     private static final Random RANDOM_GENERATOR = new Random();
     private static final int MAX_PRICE = 100;
@@ -19,7 +21,12 @@ public class FlowerTest {
 
     @BeforeEach
     public void init() {
-        flower = new Flower(RANDOM_GENERATOR.nextDouble(), FlowerColor.RED, FlowerType.ROSE, RANDOM_GENERATOR.nextDouble(MAX_PRICE));;
+        flower = new Flower(
+            RANDOM_GENERATOR.nextDouble(),
+            FlowerColor.RED,
+            FlowerType.ROSE,
+            RANDOM_GENERATOR.nextDouble() * MAX_PRICE
+        );
     }
 
     @Test
