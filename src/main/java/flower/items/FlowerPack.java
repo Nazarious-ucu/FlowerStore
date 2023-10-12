@@ -28,12 +28,12 @@ public class FlowerPack {
      *
      * @param quantity The new quantity of flowers (non-negative).
      */
-    public void setQuantity(int quantity) {
+    public void setQuantity(int newQuantity) {
         // this.quantity = quantity < 0 ? 0 : quantity;
-        if(quantity < 0){
+        if (newQuantity < 0) {
             this.quantity = 0;
-        }else{
-            this.quantity = quantity;
+        } else {
+            this.quantity = newQuantity;
         }
     }
 
