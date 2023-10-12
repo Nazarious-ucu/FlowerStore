@@ -20,7 +20,8 @@ public class FlowerPack {
         this.quantity = quantity < 0 ? 0 : quantity;
     }
 
-    public int getPrice() {
-        int i =  quantity*flower.getPrice();
+    public double getPrice() {
+        double i =  quantity*flower.getPrice();
+        return i;
     }
 }
