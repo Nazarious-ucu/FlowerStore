@@ -3,10 +3,17 @@ package flower.store;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import flower.items.Flower;
+import flower.items.FlowerColor;
+import flower.items.FlowerType;
+
 import java.util.Random;
 
 import org.junit.jupiter.api.Assertions;
 
+/**
+ * Unit tests for the Flower class.
+ */
 public class FlowerTest {
     private static final Random RANDOM_GENERATOR = new Random();
     private static final int MAX_PRICE = 100;
@@ -14,7 +21,12 @@ public class FlowerTest {
 
     @BeforeEach
     public void init() {
-        flower = new Flower();
+        flower = new Flower(
+            RANDOM_GENERATOR.nextDouble(),
+            FlowerColor.RED,
+            FlowerType.ROSE,
+            RANDOM_GENERATOR.nextDouble() * MAX_PRICE
+        );
     }
 
     @Test
